@@ -186,25 +186,24 @@ There are also convenient shortcuts to use in vscode.
 Build nachos
 
 ```bash
-# Build nachos line by line
-cd build.linux # code/build.linux
-make clean
-make -j
-# Or run the script in code/test
-cd test # code/test
-bash ./build_nachos.sh
-```
-
-```bash
 # Build test programs
-cd test # code/test
+# in code/test directory
 make clean
-make -j
+make add
 # Example to run a test
 ../build.linux/nachos -e add
 ```
 
-## Run Nachos On your local machine with Docker
+```bash
+# Build test programs
+# in code/test directory
+make clean
+make add
+# Example to run a test
+../build.linux/nachos -e add
+```
+
+## Run Nachos on your local machine with Docker
 
 1. Install Docker [link](https://docs.docker.com/get-docker/)
 2. Download `NachOS-4.0_MP1` from your github repository or copy from the server.
@@ -212,39 +211,37 @@ make -j
 
     ```bash
     cd NachOS-4.0_MP1
-    docker build -t nachos .
+    make build # to build the image yourself
+    # or
+    make pull # to pull the built image from docker hub
     ```
 
 4. Run the following command to start and get into the docker container (Client)
 
     ```bash
-    docker run --rm -v $(pwd):/nachos -it --platform=linux/amd64 nachos
+    make run
     ```
 
 5. Now you are in the docker container under `code/test`
 6. Now you can build and run nachos in the docker container (Docker)
 
     ```bash
-    # Build nachos line by line
-    cd ../build.linux # code/build.linux
-    make clean
-    make -j
-    rm -rf nachos.bin && cp nachos nachos.bin # Required to bypass permission issue
-    # Or run the script in code/test
-    bash ./build_nachos_docker.sh
+    bash build_nachos.sh -j
+    # or clean and build
+    bash build_nachos.sh -cj
+    # or clean and build without showing make outputs
+    bash build_nachos.sh -cqj
     ```
-
-    Note: different from the previous way, we use `nachos.bin` to run nachos in the docker container.
 
 7. To run a test program (Docker)
 
     ```bash
     # Build test programs
-    cd test # code/test
+    # in code/test directory
     make clean
-    make -j
+    make add
     # Example to run a test
-    ../build.linux/nachos.bin -e add
+    ../build.linux/nachos -e add
     ```
 
 8. To exit the docker container, run the following command (Docker)
