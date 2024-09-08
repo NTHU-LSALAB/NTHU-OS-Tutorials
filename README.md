@@ -205,6 +205,69 @@ make add
 
 ## Run Nachos on your local machine with Docker
 
+### What is Docker?
+
+> Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker's methodologies for shipping, testing, and deploying code, you can significantly reduce the delay between writing code and running it in production.
+> [Docker](https://www.docker.com/)
+
+### Why use Docker?
+
+- You can run the same environment on your local machine as the server, without installing the dependencies on your local machine.
+- To stop relying on network connection to the server, and prevent power cut (which happens a lot recently).
+
+### Pre-requisites (Windows)
+
+1. Install WSL2 [link](https://docs.microsoft.com/en-us/windows/wsl/install)
+
+    ```bash
+    wsl --install
+    ```
+
+2. Install a Linux distribution from Microsoft Store, for example Ubuntu and setup your username and password
+
+    ```bash
+    wsl --install -d Ubuntu
+    ```
+
+3. (Optional) Use WSL2 as the default version for better performance
+
+    ```bash
+    wsl --set-default-version 2
+    wsl --set-version Ubuntu 2
+    ```
+
+4. Install Docker Desktop [link](https://docs.docker.com/desktop/windows/install/)
+5. Enable WSL2 integration for your linux distribution in Docker Desktop
+
+    ![Docker WSL2 Integration](./img/dockerwsl2.png)
+
+6. Start wsl
+
+    ```bash
+    wsl
+    ```
+
+7. Make sure docker is running in wsl
+
+    ```bash
+    docker --version
+    ```
+
+8. (Important) Do not be under `/mnt/` directory when performing the following steps, , as it will cause issues. If you are not sure, run the following command to go to your home directory
+
+    ```bash
+    cd ~
+    ```
+
+9. Download `NachOS-4.0_MP1` from your github repository or copy from the server to your directory, and you can start building and running nachos in the docker container.
+
+### Pre-requisites (MacOS)
+
+1. Install Docker [link](https://docs.docker.com/desktop/install/mac-install/)
+2. Download `NachOS-4.0_MP1` from your github repository or copy from the server to your directory, and you can start building and running nachos in the docker container.
+
+### Instructions
+
 1. Install Docker [link](https://docs.docker.com/get-docker/)
 2. Download `NachOS-4.0_MP1` from your github repository or copy from the server.
 3. Run the following command to build the docker image (Client)
