@@ -1,5 +1,19 @@
 # NTHU Operating Systems Tutorials
 
+## Set Up VPN connection
+For security reasons, our server must be accessed via SSH. Below is an example of how to connect to our course VPN:
+### VPN connection steps
+1. Download [wireguard](https://www.wireguard.com/install/).
+2. Open WireGuard and select "Import tunnel from file."
+ ![image](https://hackmd.io/_uploads/S1_Li6Wp0.png)
+
+3. Choose the `.conf` file provided in the TA's email.
+ ![image](https://hackmd.io/_uploads/rkvTjTWpR.png)
+4. Click "Activate" to connect.                 
+![image](https://hackmd.io/_uploads/SkxFr26-pR.png)
+
+
+
 ## Introduction
 
 Having a nice ssh setting makes connection to server much more easier.
