@@ -8,7 +8,7 @@ Originally, connecting to server requires the following steps
 1. Run ssh command with username and ip address specified
 
     ```bash
-    ssh os23team99@10.121.187.197
+    ssh os24team99@10.121.187.31
     ```
 
 2. Enter password
@@ -47,8 +47,8 @@ Besides, you can also use Visual Studio Code to connect to the server with just 
 
     ```bash
     Host nachos
-        HostName 10.121.187.197
-        user os23team99
+        HostName 10.121.187.31
+        user os24team99
     ```
 
 4. Save and close the file
