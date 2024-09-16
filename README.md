@@ -1,18 +1,18 @@
 # NTHU Operating Systems Tutorials
 
 ## Set Up VPN connection
+
 For security reasons, our server must be accessed via SSH. Below is an example of how to connect to our course VPN:
+
 ### VPN connection steps
+
 1. Download [wireguard](https://www.wireguard.com/install/).
 2. Open WireGuard and select "Import tunnel from file."
- ![image](https://hackmd.io/_uploads/S1_Li6Wp0.png)
-
+    ![image](https://hackmd.io/_uploads/S1_Li6Wp0.png)
 3. Choose the `.conf` file provided in the TA's email.
- ![image](https://hackmd.io/_uploads/rkvTjTWpR.png)
-4. Click "Activate" to connect.                 
+    ![image](https://hackmd.io/_uploads/rkvTjTWpR.png)
+4. Click "Activate" to connect.
 ![image](https://hackmd.io/_uploads/SkxFr26-pR.png)
-
-
 
 ## Introduction
 
@@ -57,7 +57,7 @@ Besides, you can also use Visual Studio Code to connect to the server with just 
     notepad $env:userprofile\.ssh\config
     ```
 
-3. Add the following content to the file. (Replace `os23team99` with your username) (Client)
+3. Add the following content to the file. (Replace `os24team99` with your username) (Client)
 
     ```bash
     Host nachos
@@ -130,7 +130,7 @@ Congratulations! Now you can connect to the server with just a click.
 ### Open Nachos in Visual Studio Code
 
 1. Connect to the server with vscode
-2. Hit `cmd+o` for MacOS or `ctrl+k ctrl+o` for Windows, type `/home/os2023/os23team99/NachOS-4.0_MP1/code` and click ok
+2. Hit `cmd+o` for MacOS or `ctrl+k ctrl+o` for Windows, type `/home/os2024/os24team99/NachOS-4.0_MP1/code` and click ok
 3. Now you can edit the nachos code in vscode
 
 ### Git
