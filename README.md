@@ -12,7 +12,7 @@ For security reasons, our server must be accessed via SSH. Below is an example o
 3. Choose the `.conf` file provided in the TA's email.
     ![image](https://hackmd.io/_uploads/rkvTjTWpR.png)
 4. Click "Activate" to connect.
-![image](https://hackmd.io/_uploads/SkxFr26-pR.png)
+    ![image](https://hackmd.io/_uploads/SkxFr26-pR.png)
 
 ## Introduction
 
